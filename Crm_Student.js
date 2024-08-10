@@ -1,9 +1,9 @@
 
 var studentForm = (function () {
 
-    function onLoad(formContext) {
+    function onLoad(executionContext) {
         //alert("Test");
-        const identification = Xrm.Page.getAttribute("cr524_identification").getValue();
+        const formcontext = executionContext.getformContext("cr524_identification");
         if (identification == 1) {
             alert("הזדהות בעזרת ת.ז.");
         } else {
